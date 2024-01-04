@@ -21,13 +21,13 @@
 const express = require("express"); // Importing Express module
 // const app = require("./src/app"); // Importing custom app module
 
-const users=require("./src/users")
+const app=require("./src/users")
 const mongoose = require("mongoose"); // Importing Mongoose module
 const port = process.env.port || 8020; // Setting the port number
 
 // Middleware to parse JSON bodies and URL-encoded bodies
-users.use(express.json()); // Parsing JSON bodies
-users.use(express.urlencoded({ extended: false })); // Parsing URL-encoded bodies
+app.use(express.json()); // Parsing JSON bodies
+app.use(express.urlencoded({ extended: false })); // Parsing URL-encoded bodies
 
 // Connecting to the database
 // const DATABASE_URL =
@@ -45,4 +45,4 @@ db.on("error", (err) => console.log(err)); // Handling database connection error
 db.once("open", () => console.log("connected to database")); // Logging successful database connection
 
 // Starting the server
-users.listen(port, () => console.log(`App listening on port ${port}!`)); 
+app.listen(port, () => console.log(`App listening on port ${port}!`)); 
