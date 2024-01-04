@@ -127,11 +127,17 @@ app.get('/dummyapi', (req, res) => {
 });
 
 // Middleware to check MongoDB connection status
-app.use((req, res, next) => {
-    if (mongoose.connection.readyState !== 1) {
-        return res.status(500).send("Internal server error: MongoDB not connected");
-    }
-    next();
-});
+// app.use((req, res, next) => {
+//     if (mongoose.connection.readyState !== 1) {
+//         return res.status(500).send("Internal server error: MongoDB not connected");
+//     }
+//     next();
+// });
+
+
+// HANDLES ALL THE UNWANTED REQUESTS.
+app.use((req, res) => {
+    res.status(404).json({ message: "Error - Route not found" }); // Send a JSON response with a status of 404 (Not Found)
+  });
 
 module.exports = app;
