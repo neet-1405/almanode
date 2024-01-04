@@ -34,7 +34,7 @@ app.get("/",(req,res)=>{
 
 
 // Middleware to check MongoDB connection status
-routes.use((req, res, next) => {
+app.use((req, res, next) => {
     if (mongoose.connection.readyState !== 1) {
         return res.status(500).send("Internal server error: MongoDB not connected");
     }
