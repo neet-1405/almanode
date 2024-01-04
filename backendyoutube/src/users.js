@@ -33,13 +33,13 @@ app.get("/",(req,res)=>{
 });
 
 
-// Middleware to check MongoDB connection status
-app.use((req, res, next) => {
-    if (mongoose.connection.readyState !== 1) {
-        return res.status(500).send("Internal server error: MongoDB not connected");
-    }
-    next();
-});
+// // Middleware to check MongoDB connection status
+// app.use((req, res, next) => {
+//     if (mongoose.connection.readyState !== 1) {
+//         return res.status(500).send("Internal server error: MongoDB not connected");
+//     }
+//     next();
+// });
 
 // routes.get("/",(req,res)=>{
 //     res.sendFile(path.join(__dirname,"/index.html"))
@@ -54,6 +54,7 @@ app.get("/subscribers", async (req, res) => {
     } catch (err) {
         console.error(err);
         res.status(500).send("Internal server error");
+        next(err);
     }
 });
 
@@ -90,6 +91,7 @@ app.get("/subscribers/:id",async(req,res)=>{
     }
     catch(error){
         res.status(400).json({message: error.message});
+        next(err);
     }
 });
 
@@ -112,6 +114,7 @@ app.get("/subscriberss/names",async (req,res)=>{
     }
     catch(err){
         res.status(400);
+        next(err);
        
     }
 });
@@ -123,6 +126,12 @@ app.get('/dummyapi', (req, res) => {
     res.send("Dummy API is working");
 });
 
-
+// Middleware to check MongoDB connection status
+app.use((req, res, next) => {
+    if (mongoose.connection.readyState !== 1) {
+        return res.status(500).send("Internal server error: MongoDB not connected");
+    }
+    next();
+});
 
 module.exports = app;
