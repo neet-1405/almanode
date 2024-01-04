@@ -2,13 +2,13 @@
 
 const mongoose = require('mongoose')
 const subscriberModel = require('./model/schema')
-const data = require('./src/data')
+const data = require('./model/data')
 const dotenv = require("dotenv").config();
 
 
 
 const mongodbURI=process.env.MONGOOSE_URI;
-const port=process.env.port||8080;
+const port=process.env.port||8020;
 const server=app.listen(port,()=>{
     console.log("server is running on the port 8010")
 })
