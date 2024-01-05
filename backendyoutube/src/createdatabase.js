@@ -7,7 +7,8 @@ const dotenv = require("dotenv").config();
 
 
 
-const mongodbURI=process.env.MONGOOSE_URI;
+// const mongodbURI=process.env.MONGOOSE_URI;
+const mongodbURI="mongodb+srv://parasharneetesh75:Neetesh123@cluster0.gogpguc.mongodb.net/";
 const port=process.env.port||8020;
 const server=app.listen(port,()=>{
     console.log("server is running on the port 8010")
