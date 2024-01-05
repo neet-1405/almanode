@@ -34,7 +34,7 @@ app.use(express.urlencoded({ extended: false })); // Parsing URL-encoded bodies
 // "mongodb+srv://ojhaparth:test123@cluster0.9xedsar.mongodb.net/";
 
 
-MONGOOSE_URI= "mongodb://127.0.0.1:27017/subscribers";
+MONGOOSE_URI= "mongodb+srv://parasharneetesh75:Neetesh123@cluster0.gogpguc.mongodb.net/";
 mongoose.connect(MONGOOSE_URI, {
 useNewUrlParser: true,
 useUnifiedTopology: true,
