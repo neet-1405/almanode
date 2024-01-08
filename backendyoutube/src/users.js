@@ -104,11 +104,11 @@ app.get("/subscriberss/names",async (req,res)=>{
       
 
 
-        let Subscribersss =  await Subscriber.find(
+        let Subscribers =  await Subscriber.find(
             {},
             {name:1,subscribedChannel:1,_id:0});
 
-        res.status(200).json(Subscribersss);
+        res.status(200).json(Subscribers);
         // res.send(JSON.stringify({ Subscribersss}));
         // res.send(subscribers)
     }
