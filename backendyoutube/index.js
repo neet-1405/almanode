@@ -1,22 +1,4 @@
-// const express=require("express");
-// const dotenv=require("dotenv").config();
-// const cors=require("cors")
-// const mongoose=require("mongoose");
-// const bodyParser=require("body-parser");
-// const path = require("path");
-// const users=require("../backendyoutube/src/users")
-// const app=express();
 
-
-// app.use(cors());
-// app.use(express.json());
-
-// app.use(users);
-
-// app.listen(port,()=>{
-
-//     console.log(`server start at port no${Port}`)
-// })
 
 const express = require("express"); // Importing Express module
 // const app = require("./src/app"); // Importing custom app module
@@ -31,10 +13,8 @@ app.use(express.urlencoded({ extended: false })); // Parsing URL-encoded bodies
 
 // Connecting to the database
 // const DATABASE_URL =
-// "mongodb+srv://ojhaparth:test123@cluster0.9xedsar.mongodb.net/";
 
 
-// const MONGOOSE_URI= "mongodb+srv://parasharneetesh75:Neetesh123@cluster0.gogpguc.mongodb.net/";
 
 const MONGOOSE_URI = "mongodb+srv://testforcode:4O1FvTMDv6xbc1DU@cluster0.uxepwdo.mongodb.net/youtube?retryWrites=true&w=majority";
 mongoose.connect(MONGOOSE_URI, {

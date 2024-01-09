@@ -20,12 +20,7 @@ app.use(bodyParser.json());
 
 
 
-// routes.use((req,ees,next)=>{
-//     if(mongoose.connection.readystate!==1){
-//         return res.status(500).send("Internal server error mongodb not connected")
-//     }
-//     next();
-// });
+
 
 
 app.get("/",(req,res)=>{
@@ -33,17 +28,7 @@ app.get("/",(req,res)=>{
 });
 
 
-// // Middleware to check MongoDB connection status
-// app.use((req, res, next) => {
-//     if (mongoose.connection.readyState !== 1) {
-//         return res.status(500).send("Internal server error: MongoDB not connected");
-//     }
-//     next();
-// });
 
-// routes.get("/",(req,res)=>{
-//     res.sendFile(path.join(__dirname,"/index.html"))
-// });
 
 
 app.get("/subscribers", async (req, res) => {
@@ -126,13 +111,6 @@ app.get('/dummyapi', (req, res) => {
     res.send("Dummy API is working");
 });
 
-// Middleware to check MongoDB connection status
-// app.use((req, res, next) => {
-//     if (mongoose.connection.readyState !== 1) {
-//         return res.status(500).send("Internal server error: MongoDB not connected");
-//     }
-//     next();
-// });
 
 
 // HANDLES ALL THE UNWANTED REQUESTS.
