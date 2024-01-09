@@ -54,3 +54,58 @@ endpoint that returns information about a subscriber based on their ID
 
 <img width="788" alt="Screenshot 2024-01-09 120153" src="https://github.com/neet-1405/almanode/assets/142343452/243905db-cd73-46de-97a1-ff344175ae7d">
 
+
+
+## Application Folder Structure
+1. [src/users.js] -> For handling requests and responses.
+
+2. [/index.js] -> To connect and start the server.
+
+3. [src/createdatabase.js] -> To create database on MongoDB.
+
+4. [src/data.js] -> Data that has to be connnected to a database.
+
+5. [src/models/schema.js] -> For the schema.
+   
+6. [/index.html] -> The home page for the application.
+
+
+
+## Installation 
+
+You'll need to have **Node.js** and **MongoDB** installed on your computer in order to begin working on the project. 
+
+Once installed, Clone this repository to your **local** machine.
+
+Install the required dependencies as mentioned below by using **npm install <packageName>**.
+
+
+
+Start the server by **npm run server**
+
+
+
+## Dependencies
+Following dependencie are needed to run this application: 
+
+1. express
+
+2. mongoose
+
+3. nodemon
+
+
+## Deployment
+
+Web Deployment :https://almanode.vercel.app/
+
+after open once reload it
+
+Neetesh Parashar
+Pooja Ahirwar
+
+
+
+
+
+
