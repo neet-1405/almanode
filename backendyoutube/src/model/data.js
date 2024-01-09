@@ -2,14 +2,14 @@
 // default data use
 const data=[
     {
-        "name":"Neetesh parashar",
-        "subscribedChannel":"puresoul"
+        "name":"Jeread Krus",
+        "subscribedChannel":"CNET"
     },
-    {"name":"pooja ahirwar",
-    "subscribedChannel":"almabetter"},
+    {"name":"John Doe",
+    "subscribedChannel":"freecodecamp.org"},
 
-    {"name":"abc sharma",
-        "subscribedChannel":"full stackdeveloper"}
+    {"name":"Lucifier",
+        "subscribedChannel":"sentex"}
 ]
 
         // module.exports=data;
