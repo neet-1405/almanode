@@ -63,9 +63,9 @@ endpoint that returns information about a subscriber based on their ID
 
 3. [src/createdatabase.js] -> To create database on MongoDB.
 
-4. [src/data.js] -> Data that has to be connnected to a database.
+4. [src/model/data.js] -> Data that has to be connnected to a database.
 
-5. [src/models/schema.js] -> For the schema.
+5. [src/model/schema.js] -> For the schema.
    
 6. [/index.html] -> The home page for the application.
 
