@@ -101,8 +101,8 @@ Web Deployment :https://almanode.vercel.app/
 
 after open once reload it
 
--Neetesh Parashar
--Pooja Ahirwar
+1) Neetesh Parashar
+2) Pooja Ahirwar
 
 
 
